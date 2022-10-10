@@ -13,7 +13,6 @@ ___
 [Notes](#notes)
 
 
-
 ## Installation
 
 Check out the [releases](https://github.com/0x779/conveyor/releases/), download **conveyor** and [install it in Blender](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html#installing-add-ons).
@@ -21,6 +20,9 @@ ___
 ## Usage
 
 Once installed, **conveyor** is available in the n-panel. To use it, simply pick the input folder in which your models reside, pick their format, then select the folder in which the converted files will be saved, and the target format.
+
+![export](https://user-images.githubusercontent.com/1897654/194945680-b687b2aa-c380-4901-8d4b-36060224d9dc.gif)
+
 ___
 
 ## Notes

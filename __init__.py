@@ -208,3 +208,6 @@ def convertor(pathIn, formatIn, pathOut, formatOut):
                     case _:
                         bpy.ops.object.select_all(action='SELECT')
                         bpy.ops.object.delete()
+
+    bpy.ops.object.select_all(action='SELECT')
+    bpy.ops.object.delete()

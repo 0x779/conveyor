@@ -15,7 +15,7 @@ ___
 
 ## Installation
 
-Check out the [releases](https://github.com/0x779/conveyor/releases/), download **conveyor** and [install it in Blender](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html#installing-add-ons).
+Clone or download the repository, and [install it in Blender](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html#installing-add-ons).
 ___
 ## Usage
 

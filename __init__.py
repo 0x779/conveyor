@@ -164,7 +164,7 @@ if __name__ == "__main__":
 def convertor(pathIn, formatIn, pathOut, formatOut):
     for root, dirs, files in os.walk(pathIn):
         for f in files:
-            if f.endswith('.' + str(formatIn)) :
+            if f.lower().endswith('.' + str(formatIn)) :
                 in_file = os.path.join(pathIn, f)
                 if (formatOut == "gltfs"):
                     out_file = os.path.join(pathOut, Path(in_file).stem + ".gltf")

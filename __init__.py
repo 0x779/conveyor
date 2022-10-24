@@ -204,7 +204,7 @@ def convertor(pathIn, formatIn, pathOut, formatOut):
                     case 'glb':
                         bpy.ops.export_scene.gltf(filepath=out_file, export_format='GLB')
                     case 'dae':
-                        bpy.ops.wm.collada_export(filepath = out_file)
+                        bpy.ops.wm.collada_export(filepath = out_file, use_texture_copies=False)
                     case _:
                         bpy.ops.object.select_all(action='SELECT')
                         bpy.ops.object.delete()

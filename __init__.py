@@ -57,6 +57,7 @@ class ConveyorProperties(PropertyGroup):
             ("obj", "OBJ", ""),
             ("gltf", "GLTF/GLB", ""),
             ("dae", "DAE", ""),
+            ("stl", "STL", ""),
         ),
         name="Imported formats",
         default="fbx",
@@ -71,6 +72,7 @@ class ConveyorProperties(PropertyGroup):
             ("gltfs", "GLTF (Separate)", ""),
             ("glb", "GLB", ""),
             ("dae", "DAE", ""),
+            ("stl", "STL", ""),
         ),
         name="Exported formats",
         default="obj",
@@ -186,6 +188,8 @@ def convertor(pathIn, formatIn, pathOut, formatOut):
                         bpy.ops.import_scene.gltf(filepath=in_file)
                     case 'dae':
                         bpy.ops.wm.collada_import(filepath = in_file, auto_connect = True, find_chains = True, fix_orientation = True)
+                    case 'stl':
+                        bpy.ops.import_mesh.stl(filepath= in_file, global_scale=1.0, use_scene_unit=False, use_facet_normal=False, axis_forward='Y', axis_up='Z')
                     case _:
                         bpy.ops.object.select_all(action='SELECT')
                         bpy.ops.object.delete()
@@ -205,6 +209,8 @@ def convertor(pathIn, formatIn, pathOut, formatOut):
                         bpy.ops.export_scene.gltf(filepath=out_file, export_format='GLB')
                     case 'dae':
                         bpy.ops.wm.collada_export(filepath = out_file, use_texture_copies=False)
+                    case 'stl':
+                        bpy.ops.export_mesh.stl(filepath=out_file, global_scale=1.0, use_scene_unit=False, ascii=False, use_mesh_modifiers=True, batch_mode='OFF', axis_forward='Y', axis_up='Z')
                     case _:
                         bpy.ops.object.select_all(action='SELECT')
                         bpy.ops.object.delete()

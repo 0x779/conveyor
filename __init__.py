@@ -108,30 +108,20 @@ class OBJECT_PT_CustomPanel(Panel):
         box.prop(scn.conveyor_tool, "formatOut", text="Format")
 
         layout.operator(Conveyor_OT_custom.bl_idname)
-
-        # print the path to the console
-        #print (scn.conveyor_tool.pathIn)
         
 
 class Conveyor_OT_custom(bpy.types.Operator):
     """Tooltip"""
-    bl_idname = "object.convert"
+    bl_idname = "object.conveyor"
     bl_label = "Convert"
 
     def execute(self, context):
-        # Your code here 
-        # ...
-
         convertor(
             str(context.scene.conveyor_tool.pathIn),
             str(context.scene.conveyor_tool.formatIn),
             str(context.scene.conveyor_tool.pathOut),
             str(context.scene.conveyor_tool.formatOut)
             ) 
-       # print ("input dir: " + str(context.scene.conveyor_tool.pathIn))
-       # print ("input format: " + str(context.scene.conveyor_tool.formatIn))
-       # print ("output dir: " + str(context.scene.conveyor_tool.pathOut))
-       # print ("output format: " + str(context.scene.conveyor_tool.formatOut))
         return {'FINISHED'}
 
 # ------------------------------------------------------------------------
